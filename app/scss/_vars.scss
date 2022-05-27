@@ -1,0 +1,22 @@
+$gray: #e7f2f8;
+$text-gray: #3f4b61;
+$red: #E3403B;
+@keyframes circle{
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes circle_minus{
+    from {
+        transform: rotate(45deg);
+    }
+
+    to {
+        transform: rotate(-316deg);
+    }
+}

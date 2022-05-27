@@ -72,7 +72,7 @@ gulp.task('script', function(){
     return gulp.src([
         'node_modules/jquery/dist/jquery.js',
         'node_modules/slick-carousel/slick/slick.js',
-        'node_modules/magnific-popup/dist/jquery.magnific-popup.js'
+        // 'node_modules/magnific-popup/dist/jquery.magnific-popup.js'
     ])
 
     .pipe(concat('libs.min.js'))
@@ -83,7 +83,7 @@ gulp.task('script', function(){
 
 
 gulp.task('watch', function(){
-    gulp.watch('app/scss/style.scss', gulp.parallel('sass'));
+    gulp.watch('app/scss/**/*.scss', gulp.parallel('sass'));
     gulp.watch('app/scss/media.scss', gulp.parallel('sassMedia'));
     gulp.watch('app/*.html', gulp.parallel('html'));
     gulp.watch('app/js/*.js', gulp.parallel('js'));
