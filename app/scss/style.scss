@@ -462,11 +462,14 @@
 
 .about__images-serf {
     display: none;
+    padding-bottom: 50px;
+}
+
+.about__images-serfwrap {
     flex-wrap: wrap;
     justify-content:space-around;
-    margin: 0 auto;
     transition: display .5s;
-    padding-bottom: 50px;
+    display: flex;
 }
 
 .about__image-box-serf {

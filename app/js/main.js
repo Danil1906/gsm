@@ -35,11 +35,6 @@ $(function () {
         let sert_block = $('.about__images-serf')
         $(sert_block).slideToggle()
 
-        if ($(sert_block).css('display') === 'block') {
-            $(sert_block).css('display', 'flex')
-            console.log('Увидел none')
-        }
-
         $(this).toggleClass('about__title-sert--active')
 
     });
@@ -55,22 +50,22 @@ $(function () {
     let all_products_btn = document.querySelectorAll('.products__item-btn')
     all_products_btn.forEach(function(elems){
         // Тут нузно взять титле и поместить
+        let input_text = ''
 
         // text_for_form
         $(elems).on('click', function(){
             let name_prod = $(elems).closest('.products__item-btnbox').siblings('.products__item-textinfo').find('.products__item-name').text()
             let form_text = $('.text_for_form').text()
-            let input_text = form_text.replace('$', name_prod)
-            console.log(input_text)
+            input_text = form_text.replace('$', name_prod)
 
-            $(elems).magnificPopup({
-                type:'inline',
-                midClick: true
-            });
-
+            
             $('.popup-form__textarea').val(input_text)
         });
-
+        
+        $(elems).magnificPopup({
+            type:'inline',
+            midClick: true
+        });
 
     })
 })
